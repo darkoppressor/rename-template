@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="rename-template" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option extended_obj_names="1" />
+		<Build>
+			<Target title="Release-Windows-x86_64">
+				<Option platforms="Windows;" />
+				<Option output="Rename-Template-Windows-x86_64.exe" prefix_auto="1" extension_auto="0" />
+				<Option object_output=".objs/windows-x86_64" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O2" />
+					<Add option="-w" />
+					<Add directory="C:/Development/c++/boost" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lmingw32" />
+					<Add option="-Wl,--stack=67108864" />
+					<Add library="C:\Development\c++\boost\stage\lib\x86_64\libboost_system-mt.a" />
+					<Add library="C:\Development\c++\boost\stage\lib\x86_64\libboost_filesystem-mt.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="main.cpp" />
+		<Unit filename="main.h" />
+		<Unit filename="string_stuff.cpp" />
+		<Unit filename="string_stuff.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
