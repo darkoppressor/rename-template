@@ -23,13 +23,35 @@ int main(int argc,char* args[]){
         string program_name=args[0];
         cout<<"Usage: "<<program_name<<" project-name\n";
         cout<<"project-name should be 1 or 2 words, all lower case, dashed\n";
-        cout<<"project-name should only consist of characters that are supported as filenames\n";
+        cout<<"project-name should consist only of letters, numbers, and optionally a '-'\n";
+        cout<<"project-name must not exceed 255 characters\n";
 
         return 0;
     }
 
+    string name=args[1];
+
+    name=name.substr(0,255);
+
+    bool dash_detected=false;
+    for(int i=0;i<name.length();i++){
+        if(name[i]=='-'){
+            if(!dash_detected){
+                dash_detected=true;
+            }
+            else{
+                name.erase(name.begin()+i);
+                i--;
+            }
+        }
+        else if(!((name[i]>='A' && name[i]<='Z') || (name[i]>='a' && name[i]<='z') || (name[i]>='0' && name[i]<='9'))){
+            name.erase(name.begin()+i);
+            i--;
+        }
+    }
+
     vector<string> name_parts;
-    boost::algorithm::split(name_parts,args[1],boost::algorithm::is_any_of("-"));
+    boost::algorithm::split(name_parts,name,boost::algorithm::is_any_of("-"));
 
     if(name_parts.size()<=0){
         cout<<"Error: The argument resolved to 0 name parts\n";
