@@ -29,7 +29,7 @@
 			</Target>
 			<Target title="Release-Linux-x86_64">
 				<Option platforms="Unix;" />
-				<Option output="Rename-Template-Linux-x86_64.exe" prefix_auto="1" extension_auto="0" />
+				<Option output="Rename-Template-Linux-x86_64" prefix_auto="1" extension_auto="0" />
 				<Option working_dir="" />
 				<Option object_output=".objs/linux-x86_64" />
 				<Option type="1" />
