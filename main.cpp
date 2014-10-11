@@ -89,11 +89,8 @@ int main(int argc,char* args[]){
     replace_in_file("../Template","Template",name_caps_dashed);
     rename_file("../Template","../"+name_caps_dashed);
 
-    replace_in_file("../template.cbp","template",name_lower_case_dashed);
-    replace_in_file("../template.cbp","Template",name_caps_dashed);
-
-    rename_file("../template.layout","../"+name_lower_case_dashed+".layout");
-    rename_file("../template.cbp","../"+name_lower_case_dashed+".cbp");
+    replace_in_file("../project.cbp","template",name_lower_case_dashed);
+    replace_in_file("../project.cbp","Template",name_caps_dashed);
 
     replace_in_file("../data/engine","template",name_lower_case_dashed);
 
