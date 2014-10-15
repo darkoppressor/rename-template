@@ -17,10 +17,12 @@
 					<Add option="-fexpensive-optimizations" />
 					<Add option="-O2" />
 					<Add option="-w" />
+					<Add option="-m64" />
 					<Add directory="C:/Development/c++/boost" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add option="-m64" />
 					<Add option="-lmingw32" />
 					<Add option="-Wl,--stack=67108864" />
 					<Add library="C:\Development\c++\boost\stage\lib\x86_64\libboost_system-mt.a" />
@@ -37,14 +39,16 @@
 					<Add option="-fexpensive-optimizations" />
 					<Add option="-O2" />
 					<Add option="-w" />
+					<Add option="-m64" />
 					<Add directory="/usr/include/" />
 					<Add directory="/usr/include/x86_64-linux-gnu/" />
-					<Add directory="/home/kevin/.codeblocks/boost/" />
+					<Add directory="/home/tails/build-server/linux-x86_64/boost/" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="\home\kevin\.codeblocks\boost\stage\lib\libboost_system.a" />
-					<Add library="\home\kevin\.codeblocks\boost\stage\lib\libboost_filesystem.a" />
+					<Add option="-m64" />
+					<Add library="/home/tails/build-server/linux-x86_64/boost/stage/lib/libboost_system.a" />
+					<Add library="/home/tails/build-server/linux-x86_64/boost/stage/lib/libboost_filesystem.a" />
 				</Linker>
 			</Target>
 		</Build>
