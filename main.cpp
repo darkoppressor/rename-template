@@ -27,10 +27,10 @@ int main(int argc,char* args[]){
         string program_name=args[0];
 
 		cout<<program_name<<" - convert a Cheese Engine template directory into a new project\n";
-        cout<<"Usage: "<<program_name<<" project-directory project-name\n";
-        cout<<"project-name should be 1 or 2 words, all lower case, dashed\n";
-        cout<<"project-name should consist only of letters, numbers, and optionally a '-'\n";
-        cout<<"project-name must not exceed 255 characters\n";
+        cout<<"Usage: "<<program_name<<" PROJECT-DIRECTORY PROJECT-NAME\n";
+        cout<<"PROJECT-NAME should be 1 or 2 words, all lower case, dashed\n";
+        cout<<"PROJECT-NAME should consist only of letters, numbers, and optionally a '-'\n";
+        cout<<"PROJECT-NAME must not exceed 255 characters\n";
 
         return 0;
     }
@@ -38,7 +38,7 @@ int main(int argc,char* args[]){
     string project_directory=args[1];
 
     if(project_directory.length()==0){
-        cout<<"Error: The project-directory argument has a length of 0\n";
+        cout<<"Error: The PROJECT-DIRECTORY argument has a length of 0\n";
 
         return 1;
     }
@@ -72,7 +72,7 @@ int main(int argc,char* args[]){
     boost::algorithm::split(name_parts,name,boost::algorithm::is_any_of("-"));
 
     if(name_parts.size()<=0){
-        cout<<"Error: The project-name argument resolved to 0 name parts\n";
+        cout<<"Error: The PROJECT-NAME argument resolved to 0 name parts\n";
 
         return 1;
     }
@@ -215,7 +215,7 @@ bool replace_in_file(string filename,string target,string replacement){
         }
     }
     else{
-        cout<<"Error: Failed to open "+filename+" for updating (input phase)\n";
+        cout<<"Error: Failed to open "<<filename<<" for updating (input phase)\n";
 
         file.close();
         file.clear();
@@ -242,7 +242,7 @@ bool replace_in_file(string filename,string target,string replacement){
         }
     }
     else{
-        cout<<"Error: Failed to open "+filename+" for updating (output phase)\n";
+        cout<<"Error: Failed to open "<<filename<<" for updating (output phase)\n";
 
         file_save.close();
         file_save.clear();
