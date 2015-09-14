@@ -77,6 +77,12 @@
 					<Add library="\usr\lib\gcc\x86_64-w64-mingw32\4.8\libstdc++.a" />
 					<Add library="\home\tails\build-server\windows-x86_64\boost\stage\lib\libboost_system.a" />
 					<Add library="\home\tails\build-server\windows-x86_64\boost\stage\lib\libboost_filesystem.a" />
+					<Add library="\usr\x86_64-w64-mingw32\lib\libwinpthread.a" />
+					<Add library="\usr\x86_64-w64-mingw32\lib\libole32.a" />
+					<Add library="\usr\x86_64-w64-mingw32\lib\libimm32.a" />
+					<Add library="\usr\x86_64-w64-mingw32\lib\libgdi32.a" />
+					<Add library="\usr\x86_64-w64-mingw32\lib\liboleaut32.a" />
+					<Add library="\usr\x86_64-w64-mingw32\lib\libversion.a" />
 				</Linker>
 			</Target>
 		</Build>
