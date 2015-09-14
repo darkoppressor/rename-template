@@ -25,6 +25,8 @@ int main(int argc,char* args[]){
     }
     else if(argc!=3){
         string program_name=args[0];
+
+		cout<<program_name<<" - convert a Cheese Engine template directory into a new project\n";
         cout<<"Usage: "<<program_name<<" project-directory project-name\n";
         cout<<"project-name should be 1 or 2 words, all lower case, dashed\n";
         cout<<"project-name should consist only of letters, numbers, and optionally a '-'\n";
