@@ -51,8 +51,8 @@
 				<Linker>
 					<Add option="-s" />
 					<Add option="-m64" />
-					<Add library="/home/tails/build-server/linux-x86_64/boost/stage/lib/libboost_system.a" />
-					<Add library="/home/tails/build-server/linux-x86_64/boost/stage/lib/libboost_filesystem.a" />
+					<Add library="\home\tails\build-server\linux-x86_64\boost\stage\lib\libboost_system.a" />
+					<Add library="\home\tails\build-server\linux-x86_64\boost\stage\lib\libboost_filesystem.a" />
 				</Linker>
 			</Target>
 			<Target title="Cross-Compile-Windows-x86_64">
@@ -96,6 +96,7 @@
 		<Unit filename="main.h" />
 		<Unit filename="string_stuff.cpp" />
 		<Unit filename="string_stuff.h" />
+		<Unit filename="version.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
