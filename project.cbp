@@ -19,6 +19,7 @@
 					<Add option="-std=c++11" />
 					<Add option="-w" />
 					<Add option="-m64" />
+					<Add option="-DGAME_OS_WINDOWS" />
 					<Add directory="C:/Development/c++/boost" />
 				</Compiler>
 				<Linker>
@@ -42,6 +43,7 @@
 					<Add option="-std=c++11" />
 					<Add option="-w" />
 					<Add option="-m64" />
+					<Add option="-DGAME_OS_LINUX" />
 					<Add directory="/usr/include/" />
 					<Add directory="/usr/include/x86_64-linux-gnu/" />
 					<Add directory="/home/tails/build-server/linux-x86_64/boost/" />
@@ -65,6 +67,7 @@
 					<Add option="-std=c++11" />
 					<Add option="-w" />
 					<Add option="-m64" />
+					<Add option="-DGAME_OS_WINDOWS" />
 					<Add directory="/usr/x86_64-w64-mingw32/include" />
 					<Add directory="/home/tails/build-server/windows-x86_64/boost/" />
 				</Compiler>
